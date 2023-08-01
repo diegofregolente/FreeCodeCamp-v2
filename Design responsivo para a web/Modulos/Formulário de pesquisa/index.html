@@ -4,19 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Formulário de pesquisa</title>
 </head>
 
 <body>
-  <h1 id="title"></h1>
-  <p id="description"></p>
-  <form action="POST" id="survey-form">
-    <label for="name" id="name-label"><input type="text" id="name"></label>
-
-    <input type="email" id="email">
-    <input type="number" id="number" min="10" max="99">
-  </form>
-</body>
-
-</html>
+  
+  <div class="container">
+    
+    <header>
+      <h1 id="title" class="text-center">Cadastro de Candidato</h1>
+      <p id="description" class="text-center">Preencha o formulario para completar seu cadastro</p>
+    </header>
+    
+    <form action="POST" id="survey-form" action='https://register-demo.freecodecamp.org'>
+      
+      <fieldset>
+        <label for="name" id="name-label">Nome</label>
+        <input type="text" id="name" placeholder="Insert your full name" required class="campos">
+      </fieldset>
+      
+      <fieldset>
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" placeholder="Insert your email example@mail.com" required class="campos">
+      </fieldset>
+      
+      <fieldset>
+        <label for="number" id="number-label">Idade</label>
+          <input type="number" id="number" min="10" max="99" placeholder="Age (10-99)" required class="campos">
+      </fieldset>
+      
+      <fieldset>
+        <p>Para qual vaga você está se inscrevendo?</p>
+        <select name="role" id="dropdown" required class="campos">
+          <option value="" selected disabled>Escolha uma opção</option>
+          <option value="estagiario">Estágiario</option>
+          <option value="analista">Analista</option>
+          <option value="programador">Programador</option>
+          <option value="gerente">Gerente</option>
+        </select>
+      </fieldset>
+      
+      <fieldset>
+        <p>Por onde vocë descobriu nossa empresa?</p>
+        <label for="linkedin"><input type="radio" name="social" value="linkedin" id="linkedin" class=""> Linkedin</label>
+        <label for="facebook"><input type="radio" name="social" value="facebook" id="facebook" class=""> Facebook</label>
+        <label for="youtube"><input type="radio" name="social" value="youtube" id="youtube" class=""> Youtube</label>
+      </fieldset>
+      
+      <fieldset>
+        <p>Como você está se sentindo agora?</p>
+        <select name="humor" id="dropdown2" required class="campos">
+          <option value="" selected disabled>Escolha uma opção</option>
+          <option value="feliz">Feliz</option>
+          <option value="triste">Triste</option>
+          <option value="raiva">Raiva</option>
+          <option value="outro">Outro</option>
+        </select>
+      </fieldset>
+      
+      <fieldset>
+        <p>O que você pretende aprender para conseguir essa vaga?</p>
+        <label for="html"><input type="checkbox" name="learn" id="html" value="html" class=""> HTML</label>
+        <label for="CSS"><input type="checkbox" name="learn" id="CSS" value="CSS" class=""> CSS</label>
+        <label for="PHP"><input type="checkbox" name="learn" id="PHP" value="PHP" class=""> PHP</label>
+        <label for="JAVASCRIPT"><input type="checkbox" name="learn" id="JAVASCRIPT" value="JAVASCRIPT" class=""> Java
+          Script</label>
+          <label for="MySQL"><input type="checkbox" name="learn" id="MySQL" value="MySQL" class=""> MySQL</label>
+          <label for="Bootstrap"><input type="checkbox" name="learn" id="Bootstrap" value="Bootstrap" class=""> Bootstrap</label>
+        </fieldset>
+        
+        <fieldset>
+          <p>Alguma sugestão ou comentário?</p>
+          <textarea name="commentario" id="commentarios" placeholder="Insira seu comentário ou sugestão aqui" rows="3"
+          cols="30" class=""></textarea>
+        </fieldset>
+        
+        <button type="submit" id="submit" class=""> Submit</button>
+        
+      </form>
+      
+    </div>
+    
+  </body>
+  
+  </html>
